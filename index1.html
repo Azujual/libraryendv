@@ -1,0 +1,112 @@
+<html>
+<head>
+     <link rel="shortcut icon" href="img\title.logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta charset="utf-8" content="width=device-width, initial-scale=1">
+<title>Endava Library</title>
+<h2 id="h2">Endava Library</h2>	
+</head>
+<body>
+  <fieldset>
+  <input id="searchInput" type="text" placeholder="Enter your search" width="1330" height="100">
+  <button type="submit" class="btn btn-default" onclick="searchBook();">Search</button>
+</fieldset>
+<!-- <img src="img\book.jpg" width="1330" height="200"></img> -->
+</div>
+<div class="wrapper">
+   
+    <table id="data_display">
+        <thead>
+            <tr>
+                <td>ID</td>	
+                <td>Title</td>
+                <td>Author</td>
+                <td>Genre</td>
+				        <td>Status</td>
+				        <td></td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+   </div>
+
+	<div class="input-wrapper">
+        <fieldset>
+            <form name="addnewbook" id="addnewbook" class="form-horizontal" onsubmit="return false">
+            <h3 id="h3" align="center" >Add a new book</h3>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Book title</label>  
+  <div class="col-md-4">
+  <input name="title" id="title" type="text"  placeholder="Enter book title" class="form-control input-md" required>  
+  </div>
+</div>
+<br>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Book author</label>  
+  <div class="col-md-4">
+  <input id="author" name="author" type="text" placeholder="Enter author's name" class="form-control input-md" required>  
+  </div>
+</div>
+<br>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" >Select book genre</label>
+  <div class="col-md-4">
+    <select id="genre" name="selectbasic" class="form-control" required>  
+      <option hidden="true" id="hiddenSelect" value="">Select book genre</option>
+      <option value="4">Action</option>
+      <option value="5">Adventure</option>
+      <option value="11">Biography</option>
+      <option value="33">Classics</option>
+      <option value="3">Drama</option>
+      <option value="29">Dystopian fiction</option>
+      <option value="32">Fiction</option>
+ <!--      <option value="25">Historical fiction</option> -->
+      <option value="24">Historical fiction</option>
+<!--       <option value="24">Historical novel</option> -->
+      <option value="14">History</option>
+      <option value="8">Horror</option>
+      <option value="26">Novel</option>
+      <option value="6">Romance</option>
+      <option value="1">Science fiction</option>
+    </select>
+  </div>
+</div>
+<br>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Select book status</label>
+  <div class="col-md-4">
+    <select id="status" name="selectbasic" class="form-control" required>
+      <option hidden="true" value=""><span id="hiddenSelect">Select book status</span></option>
+      <option value="2">Unassigned</option>
+      <option value="1">Assigned</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10"><br>
+        <button type="submit" class="btn btn-default" onclick="create();">Add book</button>
+</fieldset>
+</form>
+
+
+<!--scripts-->
+
+<script src="js/loadData.js"></script>
+<script src="js/createProduct.js"></script>
+<script src="js/editProduct.js"></script>
+<script src="js/deleteProduct.js"></script>
+<script src="js/editFileds.js"></script>
+<script src="js/viewbook.js"></script>
+<script src="js/visitpage.js"></script>
+
+
+</body>
+</html>

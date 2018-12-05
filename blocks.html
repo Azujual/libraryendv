@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="shortcut icon" href="img\title.logo.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="css\blockStyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<meta charset="utf-8" content="width=device-width, initial-scale=1.0">
+
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<!-- <h2>CSS Layout Float</h2>
+<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p> -->
+
+<header>
+        <!-- <start of logo> -->
+        <section>
+                <a href="http://localhost/endava-library/blocks.html">
+                <!-- <object id="logo" data="/-/media/EndavaDigital/Endava/Images/SVG/logo-svg.ashx" type="image/svg+xml" name="headerobject" width="131" height="44"> -->
+                <img src="https://www.endava.com/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx" alt="Endava" width="131"></a>
+                </object>
+        <!-- <end of logo> -->
+                    <div class="titlefront">
+                    <h1>[ the library project ]</h1>
+                    </div>
+<!-- <modal window - ADD BOOK -> -->
+                                  <div class="container">
+<!-- Trigger the modal with a button -->
+                                  <button class="trigger" id="modalButton">Add new book</button>
+                                  <div class="modal">
+                                  <div class="modal-content">
+                                  <span class="close-button">&times;</span>
+                                  <form class="form-horizontal" onsubmit="return false">
+<!-- start of ADD BOOK FORM -->
+                        <h3 id="h3" align="center" >Add a new book</h3>
+<!-- field - BOOK TITLE-->
+                        <div class="input-wrapper">
+                        <label class="col-md-4 control-label">Book title</label>  
+                        <div class="col-md-4">
+                        <input id="title" type="text"  placeholder="Enter book title" class="form-control input-md" required>  
+                        </div>
+                        </div>
+                        <br>
+<!-- field - BOOK AUTHOR-->
+                        <div class="form-group">
+                        <label class="col-md-4 control-label">Book author</label>  
+                        <div class="col-md-4">
+                        <input id="author" type="text" placeholder="Enter author's name" class="form-control input-md" required>  
+                        </div>
+                        </div>
+                        <br>
+<!-- select - BOOK GENRE -->
+                        <div class="form-group">
+                        <label class="col-md-4 control-label" >Select book genre</label>
+                        <div class="col-md-4">
+                        <select id="genre" class="form-control" required>  
+                        <option hidden="true" id="hiddenSelect" value="">Select book genre</option>
+                        <option value="4">Action</option>
+                        <option value="5">Adventure</option>
+                        <option value="11">Biography</option>
+                        <option value="33">Classics</option>
+                        <option value="3">Drama</option>
+                        <option value="29">Dystopian fiction</option>
+                        <option value="32">Fiction</option>
+                  <!--      <option value="25">Historical fiction</option> -->
+                        <option value="24">Historical fiction</option>
+                  <!--       <option value="24">Historical novel</option> -->
+                        <option value="14">History</option>
+                        <option value="8">Horror</option>
+                        <option value="26">Novel</option>
+                        <option value="6">Romance</option>
+                        <option value="1">Science fiction</option>
+                        </select>
+                        </div>
+                        </div>
+                        <br>
+<!-- Select BOOK STATUS -->
+                        <div class="form-group">
+                        <label class="col-md-4 control-label" for="selectbasic">Select book status</label>
+                        <div class="col-md-4">
+                              <select id="status" class="form-control" required>
+                              <option hidden="true" value=""><span id="hiddenSelect">Select book status</span></option>
+                              <option value="2">Unassigned</option>
+                              <option value="1">Assigned</option>
+                        </select>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10"><br>
+        <button type="submit" class="btn btn-default" onclick="create();">Add book</button>
+                        </div> <!-- part of modal code -->
+                        </div> <!-- part of modal code -->
+                        </section>
+        <!-- <end of modal window - ADD BOOK -> -->
+        <!-- <start of search> -->
+        <!-- <section> -->
+        <section id="searchFieldTitle">
+            <input id="searchInput" type="text" placeholder="Enter tittle">
+            <button type="submit" class="btn btn-default" onclick="searchBook();">Search</button>          
+        </section>
+		<p></p>
+		<section id="searchFieldAuthor">
+            <input id="searchInput" type="text" placeholder="Enter author">
+            <button type="submit" class="btn btn-default" onclick="searchBook();">Search</button>          
+        </section>
+        <!-- <end of search> -->
+</header>
+
+<section>
+ 
+<article>
+              <div class="wrapper">
+                 
+                  <table class="table_rows">
+                      <thead>
+                          <tr>
+                              <td>ID</td> 
+                              <td>Title</td>
+                              <td>Author</td>
+                              <td>Genre</td>
+                              <td>Status</td>
+                              <td></td>
+                          </tr>
+                      </thead>
+                      <tbody></tbody>
+                  </table>
+  </article>
+
+  <nav>
+    <ul>
+<!-- <CHECKBOX FOR FILTERS -> -->
+  <h3 id="h3" align="center" >Filter by genre</h3>
+    <div><input type="checkbox" id="action" class="theCheckGen" value="4">Action<label for="action"></label></div>
+    <div><input type="checkbox" id="adventure" class="theCheckGen" value="5">Adventure<label for="adventure"></label></div>
+    <div><input type="checkbox" id="biography" class="theCheckGen" value="11">Biography<label for="biography"></label></div>
+    <div><input type="checkbox" id="classics" class="theCheckGen" value="33">Classics<label for="classics"></label></div>
+    <div><input type="checkbox" id="drama" class="theCheckGen" value="3">Drama<label for="drama"></label></div>
+    <div><input type="checkbox" id="dystopianfiction" class="theCheckGen" value="29">Dystopian fiction<label for="dystopianfiction"></label></div>
+    <div><input type="checkbox" id="fiction" class="theCheckGen" value="32">Fiction<label for="fiction"></label></div>
+    <div><input type="checkbox" id="historicalfiction" class="theCheckGen" value="25">Historical fiction<label for="historicalfiction"></label></div>
+    <div><input type="checkbox" id="historicalfiction2" class="theCheckGen" value="24">Historical fiction<label for="historicalfiction2"></label></div>
+    <div><input type="checkbox" id="historicalnovel" class="theCheckGen" value="24">Historical novel<label for="historicalnovel"></label></div>
+    <div><input type="checkbox" id="history" class="theCheckGen" value="14">History<label for="history"></label></div>
+    <div><input type="checkbox" id="horror" class="theCheckGen" value="8">Horror<label for="horror"></label></div>
+    <div><input type="checkbox" id="novel" class="theCheckGen" value="26">Novel<label for="novel"></label></div>
+    <div><input type="checkbox" id="romance" class="theCheckGen" value="6">Romance<label for="romance"></label></div>
+    <div><input type="checkbox" id="scifi" class="theCheckGen"  value="1">Science fiction<label for="scifi"></label></div>
+    
+    </ul>
+  </nav>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+<script src="js/loadData.js"></script>
+<script src="js/createProduct.js"></script>
+<script src="js/editProduct.js"></script>
+<script src="js/deleteProduct.js"></script>
+<script src="js/editFields.js"></script>
+<script src="js/viewbook.js"></script>
+<script src="js/visitpage.js"></script>
+<script src="js/modalButton.js"></script>
+<script src="js/searchBook.js"></script>
+
+
+</body>
+</html>

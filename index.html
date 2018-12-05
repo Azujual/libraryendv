@@ -1,0 +1,150 @@
+
+<html>
+<head>
+     <link rel="shortcut icon" href="img\title.logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<meta charset="utf-8">
+<title>Endava Library</title>
+	
+	
+</head>
+<body>
+<div class="row">
+<div class="header"
+<h1  align="right" id="h1"> Welcome to Endava Library  </h1>
+
+</div>
+
+    <div class="wrapper">
+   
+    <table id="data_display">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Title</td>
+                <td>Author</td>
+                <td>Genre</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+   </div>
+    
+	<div class="input-wrapper">
+
+
+            <div class="input-wrapper">
+        <fieldset>
+            <form name="addnewbook" class="form-horizontal" onsubmit="return validateForm();">
+    <h3 id="h3" align="center" >Add a new book</h3>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Book title</label>  
+  <div class="col-md-4">
+  <input name="title" id="title" type="text"  required placeholder="Enter book title" class="form-control input-md">  
+  </div>
+</div>
+<br>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Book author</label>  
+  <div class="col-md-4">
+  <input id="author" name="author" type="text" required placeholder="Enter author's name" class="form-control input-md">  
+  </div>
+</div>
+<br>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" >Select book genre</label>
+  <div class="col-md-4">
+    <select id="genre" name="selectbasic" class="form-control">  
+      <option value="4">Action</option>
+      <option value="5">Adventure</option>
+      <option value="11">Biography</option>
+      <option value="33">Classics</option>
+      <option value="3">Drama</option>
+      <option value="29">Dystopian fiction</option>
+      <option value="32">Fiction</option>
+      <option value="25">Historical fiction</option>
+      <option value="24">Historical fiction</option>
+      <option value="24">Historical novel</option>
+      <option value="14">History</option>
+      <option value="8">Horror</option>
+      <option value="26">Novel</option>
+      <option value="6">Romance</option>
+      <option value="1">Science fiction</option>
+    </select>
+  </div>
+</div>
+<br>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Select book status</label>
+  <div class="col-md-4">
+    <select id="status" name="selectbasic" class="form-control">
+      <option value="2">Unassigned</option>
+      <option value="1">Assigned</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10"><br>
+        <button type="submit" class="btn btn-default" onclick="create();">Add book</button>
+</fieldset>
+</form>
+            
+        
+
+           <!-- <form> -->
+<!--     <input type="text" placeholder="Search your book .." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+    <button onclick="search()">Search</button> -->
+<!-- </form> -->
+   
+     
+             <input style="width: 300px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px; #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: #DE411B; color: #000; border-radius: 10px; border: 1px solid #999; font-size: 150%;" type="button" value="Add book " onclick="window.location.href='http://localhost/endava-library/addbook.html'" />
+</form>
+
+      </div>
+    </div>
+ 
+
+      </div>
+
+
+    
+	</div>
+    
+    
+    
+    
+
+	
+  
+			
+</form>
+    </div>
+
+</div>
+
+
+
+<script src="js/loadData.js"></script>
+<script src="js/createProduct.js"></script>
+<script src="js/editProduct.js"></script>
+<script src="js/deleteProduct.js"></script>
+<script src="js/editFileds.js"></script>
+<script src="js/viewbook.js"></script>
+<script src="js/visitpage.js"></script>
+<script src="js/validateForm.js"></script>
+
+
+
+
+</body>
+</html>
